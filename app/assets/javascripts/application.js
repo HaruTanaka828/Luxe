@@ -14,3 +14,25 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require bootstrap
+
+$(document).on('turbolinks:load', function() {
+  $('#back a').on('click',function(event){
+    $('body, html').animate({
+      scrollTop:0
+    }, 800);
+    event.preventDefault();
+  });
+});
+
+$(function () {
+    $('a[href^="#"]').click(function () {
+        var speed = 1000;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, 'swing');
+        return false;
+    });
+});

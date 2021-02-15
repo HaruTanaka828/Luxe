@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'font-awesome-sprockets';
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Libre+Barcode+EAN13+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap');
+
+.center{
+	text-align: center;
+}
+.left{
+	float: left;
+}
+.Editlink:link, .Editlink:visited, .Editlink:active{
+	text-decoration: none;
+}
+body{
+	font-family: 'Noto Serif JP', serif;
+}
+
+
+
+
+.top{
+	background-image: url('sample.jpg');
+	background-size: cover;
+	height:100vh;
+	width: 100%;
+}
+.title{
+	font-family: 'Italianno', cursive;
+	font-size: 70px;
+	color: black;
+}
+.list{
+	font-size: 20px;
+	color: black;
+}
+
+
+
+
+.text{
+	height: 50vh;
+}
+
+
+
+
+.business{
+	height: 100vh;
+}
+
+
+
+
+.contact{
+	height: 75vh;
+}
+
+
+
+
+footer{
+	color: white;
+	background-color: black;
+	height: 25vh;
+}
+.title2{
+	font-family: 'Italianno', cursive;
+	font-size: 70px;
+	color:white;
+}
+.list2{
+	font-size: 20px;
+	color: white;
+}
+
+
+
+
+
