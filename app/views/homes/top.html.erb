@@ -1,5 +1,5 @@
 <header>
-  <div class="top center">
+  <div class="center">
 
     <div class="col-sm-4">
       <%= link_to '#Business', class: "Editlink" do %>
@@ -21,8 +21,22 @@
 </header>
 
 
-<div class="text">
-  <p>なんか入れる</p>
+  <div class="video">
+    <%= video_tag("/videos/Laxe.mp4", autoplay: :true, muted: :true, loop: :true, class: 'video-content') %>
+  </div>
+
+
+<div class="text"><br><br>
+  <p class="text-title">希望を配る人を輩出する。</p><br><br>
+  <div class="text-text">
+    <p>リーダーとは“希望を配る人”。<br><br>
+      それは素晴らしい熱量を共有する。謙虚だが自信に溢れ、妥協がない。<br><br>
+      常に最善をつくす、そして結果をだす。<br><br>
+      何事にも感謝をする、苦難に負けず乗り越えていける。<br><br>
+      人情に熱く思いやりがある。<br><br>
+      様々な“希望を配る人”を輩出し、世の中に貢献できる人、会社でありたい。<br><br><br>
+    </p>
+  </div>
 </div>
 
 
@@ -42,9 +56,11 @@
         </div>
       <% end %>
     <div class="contact-head">
-      <p class="contact-title"><i class="far fa-envelope"></i> Contact</p>
+      <p class="contact-title">Contact</p>
     </div>
   </div>
+
+  <div class="contact-form">
 
     <P class="contact-text">
       <br><br>ご依頼・お問い合わせは下記フォーマットにてご送信下さい。<br><br>
@@ -52,11 +68,11 @@
       電話番号：<a href="tel:0671822493">06-7182-2493</a>(平日10:00-18:00)
     </P>
 
-  <div class="container"><hr><br>
+  <div class="container"><br>
     <div class="col-sm-3">
     </div>
 
-  <div class="col-sm-6">
+    <div class="col-sm-6">
     <%= form_with model:@contact, url: root_path do |f| %>
       <div>
   	    <%= f.text_field :name, placeholder: "担当者名", class:'form-control' %>
@@ -67,18 +83,13 @@
       <div>
   	    <%= f.text_area :body, placeholder: "お問い合わせ内容", class:'form-control', rows: 5%>
       </div><br><br>
-    <div><%= f.submit '送信',class:"btn btn-lg btn-primary", data: { confirm: "この内容で送信してよろしいですか？" }%></div><br><br>
-      </div><br><br>
+    <div><%= f.submit '送信',class:"btn btn-lg", data: { confirm: "この内容で送信してよろしいですか？" }%></div>
+    </div>
     <% end %>
+  </div><br><br><br><br>
+
   </div>
 
-
-  </div>
-
-</div>
-
-<div class="container">
-<hr><br><br>
 </div>
 
 <footer>
@@ -112,3 +123,4 @@
 
   </div>
 </footer>
+

@@ -32,21 +32,30 @@
 	text-decoration: none;
 }
 body{
+	width: 100%;
 	font-family: 'Noto Serif JP', serif;
 }
 
 
-
-
-.top{
-	background-image: url('sample.jpg');
-	background-size: cover;
-	height:100vh;
+header{
+	height: 100px;
+	background-color: white;
+}
+.video{
 	width: 100%;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+    left: 0;
+}
+.video-content{
+	height:100vh;
+	width:100%;
+    object-fit: cover;
 }
 .title{
 	font-family: 'Italianno', cursive;
-	font-size: 70px;
+	font-size: 75px;
 	color: black;
 }
 .list{
@@ -58,14 +67,49 @@ body{
 
 
 .text{
-	height: 50vh;
+	color: white;
+	text-align: center;
+	height: 500px;
+	width: 100%;
+	margin-top: 900px;
+	background-color: rgba(0,0,0,0.6);
+}
+.text-title{
+	opacity: 0;
+	font-size: 30px;
+}
+.text-text{
+	opacity: 0;
+	font-size: 20px;
+}
+.fadeInDown {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:5s;
+ -ms-animation-duration:5s;
+ animation-duration:5s;
+ -webkit-animation-name: fadeInDown;
+ animation-name: fadeInDown;
+ visibility: visible !important;
+}
+@-webkit-keyframes fadeInDown {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fadeInDown {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
 }
 
 
 
-
 .business{
+	text-align: center;
+	font-size: 60px;
+	line-height: 100vh;
 	height: 100vh;
+	background-color: white;
 }
 
 
@@ -75,22 +119,22 @@ body{
 	height: 100vh;
 }
 .contact-head{
-	background-image: url('contact.jpg');
-	background-size: cover;
-	background-color: black;
 	height: 25vh;
+	background-color: rgba(255,255,255,0.2);
 }
 .contact-title{
-	font-family: 'Brygada 1918', serif;
-	font-size: 50px;
+	font-family: 'Italianno', cursive;
+	font-size: 90px;
 	line-height: 25vh;
 	text-align: left;
 	margin-left: 150px;
 }
+.contact-form{
+	background-color: rgba(255,255,255,0.9);
+}
 .contact-text{
 	font-size: 18px;
 }
-
 
 
 footer{
@@ -109,6 +153,9 @@ footer{
 }
 
 .btn{
-	border-radius: 50%;
+	padding: 10px;
+	border-radius: 0%;
+	border:solid 1px black;
+	background-color: white;
 	box-shadow    : 6px 6px 3px #666666;
 }

@@ -36,3 +36,27 @@ $(function () {
         return false;
     });
 });
+
+$('.text-title').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.text-title').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("fadeInDown");
+  }
+ });
+});
+
+$('.text-text').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.text-text').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("fadeInDown");
+  }
+ });
+});
