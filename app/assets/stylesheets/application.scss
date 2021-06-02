@@ -186,20 +186,20 @@ header{
 
 	.drone{
 		opacity: 0;
-		background-image: url("drone.jpg");
+		background-image: image-url("drone.jpg");
 		background-size: cover;
 		}
 
 	.it{
 		opacity: 0;
-		background-image: url("it.jpg");
+		background-image: image-url("it.jpg");
 		background-size: cover;
 		margin-left: 25vw;
 	}
 
 	.resort{
 		opacity: 0;
-		background-image: url("resort.jpg");
+		background-image: image-url("resort.jpg");
 		background-size: cover;
 	}
 }
