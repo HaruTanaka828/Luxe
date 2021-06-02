@@ -26,6 +26,10 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
+
+
+//リンクにスクロール
+
 $(function () {
     $('a[href^="#"]').click(function () {
         var speed = 1000;
@@ -37,29 +41,8 @@ $(function () {
     });
 });
 
-$('.text-title').css('visibility','hidden');
-$(window).scroll(function(){
- var windowHeight = $(window).height(),
-     topWindow = $(window).scrollTop();
- $('.text-title').each(function(){
-  var targetPosition = $(this).offset().top;
-  if(topWindow > targetPosition - windowHeight + 100){
-   $(this).addClass("fadeInDown");
-  }
- });
-});
 
-$('.text-text').css('visibility','hidden');
-$(window).scroll(function(){
- var windowHeight = $(window).height(),
-     topWindow = $(window).scrollTop();
- $('.text-text').each(function(){
-  var targetPosition = $(this).offset().top;
-  if(topWindow > targetPosition - windowHeight + 100){
-   $(this).addClass("fadeInDown");
-  }
- });
-});
+//ヘッダー
 
 jQuery(function($){
   var hsize = $('header').innerHeight();//paddingを含めた高さを取得
@@ -75,4 +58,82 @@ jQuery(function($){
     }
     pos = currentPos;//現在地保存
   });
+});
+
+
+//社訓のフェードイン
+
+$('.droneimg').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.droneimg').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("fadeInDown");
+  }
+ });
+});
+
+$('.motto-title').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.motto-title').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("fadeInDown");
+  }
+ });
+});
+
+$('.motto-text').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.motto-text').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("fadeInDown");
+  }
+ });
+});
+
+
+//サービスのスライドイン
+
+$('.drone').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.drone').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("SlideRight");
+  }
+ });
+});
+
+$('.resort').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.resort').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("SlideRight");
+  }
+ });
+});
+
+$('.it').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.it').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("SlideLeft");
+  }
+ });
 });

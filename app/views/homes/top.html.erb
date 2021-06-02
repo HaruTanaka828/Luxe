@@ -1,3 +1,6 @@
+
+<!-- ヘッダー　----------------------------------------------------------->
+
 <header>
   <div class="center">
 
@@ -21,29 +24,149 @@
 </header>
 
 
-  <div class="video">
-    <%= video_tag("/videos/Laxe.mp4", autoplay: :true, muted: :true, loop: :true, class: 'video-content') %>
+<!-- 動画　----------------------------------------------------------->
+
+<div class="video">
+  <%= video_tag("/videos/Luxe.mp4", autoplay: :true, muted: :true, loop: :true, class: 'video-content') %>
+</div>
+
+
+<!-- 社訓　----------------------------------------------------------->
+
+<div class="motto"><br><br><br>
+  <div class="col-sm-3">
+    <div class="droneimg">
+      <img alt="Drone" src="<%= asset_path "drone2.png" %>" style="height: 12rem;">
+    </div>
   </div>
-
-
-<div class="text"><br><br><br>
-  <p class="text-title">希望を配る人を輩出する。</p><br><br>
-  <div class="text-text">
-    <p>リーダーとは“希望を配る人”。<br><br>
-      それは素晴らしい熱量を共有する。謙虚だが自信に溢れ、妥協がない。<br><br>
-      常に最善をつくす、そして結果をだす。<br><br>
-      何事にも感謝をする、苦難に負けず乗り越えていける。<br><br>
-      人情に熱く思いやりがある。<br><br>
-      様々な“希望を配る人”を輩出し、世の中に貢献できる人、会社でありたい。<br><br>
-    </p>
+  <div class="col-sm-6">
+    <p class="motto-title">希望を配る人を輩出する。</p><br><br>
+    <div class="motto-text">
+      <p>リーダーとは“希望を配る人”。<br><br>
+        それは素晴らしい熱量を共有する。謙虚だが自信に溢れ、妥協がない。<br><br>
+        常に最善をつくす、そして結果をだす。<br><br>
+        何事にも感謝をする、苦難に負けず乗り越えていける。<br><br>
+        人情に熱く思いやりがある。<br><br>
+        様々な“希望を配る人”を輩出し、世の中に貢献できる人、会社でありたい。<br><br>
+      </p></div>
   </div>
 </div>
 
+
+<!-- サービス　----------------------------------------------------------->
 
 <div class="service", id="Service">
-  <p>事業紹介</p>
+  <p class="title">Service</p>
+
+  <div class="list drone">
+    <div class="mask">
+      <div class="text">
+        <div class="head">最高の品質を最安で</div><hr>
+        <div class="explain">
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list it">
+    <div class="mask">
+      <div class="text">
+        <div class="head">最先端のテクノロジーを</div><hr>
+        <div class="explain">
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list resort">
+    <div class="mask">
+      <div class="text">
+        <div class="head">OTAを戦力化</div><hr>
+        <div class="explain">
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
+
+<!-- 会社概要　----------------------------------------------------------->
+
+<div class="company center">
+  <div class="title">Company</div>
+
+  <div class="container">
+    <div class="col-sm-6">
+      <table class="table">
+        <tr>
+          <th class="col-xs-3"><p></p>社名</th>
+          <td class="col-xs-9"><p></p>株式会社Luxe Resorts<p></p></td>
+        </tr>
+        <tr>
+          <th><p></p>代表取締役</th>
+          <td><p></p>末吉 力朗<p></p></td>
+        </tr>
+        <tr>
+          <th><p></p>所在地</th>
+          <td><p></p>大阪府大阪市北区天満2-8-17 天満橋パークビル4階<p></p></td>
+        </tr>
+        <tr>
+          <th><p></p>電話番号</th>
+          <td><p></p>06-7182-2493</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <table class="table">
+        <tr>
+          <th class="col-xs-3"><p></p>設立</th>
+          <td class="col-xs-9"><p></p>2017年9月14日<p></p></td>
+        </tr>
+        <tr>
+          <th><p></p>資本金</th>
+          <td><p></p>500,000円<p></p></td>
+        </tr>
+        <tr>
+          <th><p></p>従業員数</th>
+          <td><p></p>25名<p></p></td>
+        </tr>
+        <tr>
+          <th><p></p>事業内容</th>
+          <td><p></p>イベントプロモーション・移動体通信販売営業<br>ドローン空撮・YouTubeチャンネル運営</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- 問い合わせ　----------------------------------------------------------->
 
 <div class="contact center", id="Contact">
 
@@ -55,42 +178,52 @@
           </div>
         </div>
       <% end %>
-    <div class="contact-head"><br><br>
-      <p class="contact-title">Contact&nbsp;&nbsp;</p>
-    </div><br>
   </div>
 
-  <div class="contact-form">
+  <div class="title">Contact</div>
 
-    <P class="contact-text">
-      <br><br><br>ご依頼・お問い合わせは下記フォーマットにてご送信下さい。<br><br>
+  <div class="form">
+
+    <P class="text">
+      ご依頼・お問い合わせは下記フォーマットにてご送信下さい。<br><br>
       お電話での対応も承ってますのでお気軽にお問い合わせ下さい。<br><br>
       電話番号：06-7182-2493(平日10:00-18:00)
     </P>
 
   <div class="container"><br><br>
+
     <div class="col-sm-3">
     </div>
 
     <div class="col-sm-6">
+
     <%= form_with model:@contact, url: root_path do |f| %>
+
       <div>
-  	    <%= f.text_field :name, placeholder: "担当者名", class:'form-control' %>
-      </div><br><br>
+  	    <%= f.text_field :name, placeholder: "お名前", class:'form-control' %>
+      </div><br><br><br>
       <div>
   	    <%= f.text_field :address, placeholder: "メールアドレス", class:'form-control' %>
-      </div><br><br><br>
+      </div><br><br><br><br>
       <div>
-  	    <%= f.text_area :body, placeholder: "お問い合わせ内容", class:'form-control', rows: 5%>
-      </div><br><br><br>
-    <div><%= f.submit '送信',class:"btn btn-lg btn-primary", data: { confirm: "この内容で送信してよろしいですか？" }%></div>
-    </div>
+  	    <%= f.text_area :body, placeholder: "お問い合わせ内容", class:'form-control', rows: 7%>
+      </div><br><br><br><br>
+
+      <div><%= f.submit '送信', class:"btn", data: { confirm: "この内容で送信してよろしいですか？" }%></div>
+
     <% end %>
+
+    </div>
+
   </div>
 
   </div>
+
 
 </div>
+
+
+<!-- フッター　----------------------------------------------------------->
 
 <footer>
   <div class="center">
@@ -98,7 +231,7 @@
 
       <div class="col-sm-4">
       	<%= link_to '#Service', class: "Editlink" do %>
-          <br><br><p class="list2"><i class="fas fa-users"></i> SERVICE</p>
+          <br><br><p class="list"><i class="fas fa-users"></i> SERVICE</p>
         <% end %>
       </div>
 
@@ -106,7 +239,7 @@
       	<span id="back">
       	  <a href="#">
       	    <%= link_to root_path,class: "Editlink" do %>
-              <p class="title2">Luxe Resorts</p>
+              <p class="title">Luxe Resorts</p>
             <% end %>
           </a>
         </span>
@@ -114,7 +247,7 @@
 
       <div class="col-sm-4">
         <%= link_to '#Contact',class: "Editlink" do %>
-          <br><br><p class="list2"><i class="far fa-envelope"></i> CONTACT</p>
+          <br><br><p class="list"><i class="far fa-envelope"></i> CONTACT</p>
         <% end %>
       </div>
 
@@ -123,4 +256,3 @@
 
   </div>
 </footer>
-

@@ -18,28 +18,32 @@
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Libre+Barcode+EAN13+Text&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Brygada+1918&family=Courgette&family=Josefin+Sans:wght@100&display=swap');
+
+
+// 共通------------------------------------------------
 
 .center{
 	text-align: center;
 }
+
 .left{
 	float: left;
 }
-.Editlink:link, .Editlink:visited, .Editlink:active{
+
+.Editlink:link, .Editlink:visited, .Editlink:active, .Editlink:hover{
 	text-decoration: none;
 }
+
 body{
-	width: 100%;
-	font-family: 'Noto Serif JP', serif;
+	width: 100vw;
+	font-family:YuMincho, serif;
 }
 
 
+// ヘッダー------------------------------------------------
+
 header{
-	height: 100px;
+	height: 10rem;
 	width: 100%;
 	background-color: rgba(255,255,255,0.3);
 	position: fixed;
@@ -47,48 +51,65 @@ header{
 	top: 0;
     left: 0;
 	transition: all 0.5s ease;
+
+	.title{
+		font-family:"Antro Vectra";
+		font-size: 6rem;
+		color: black;
+		padding-top: 1.5rem;
+		color: black;
+	}
+
+	.list{
+		font-size: 2rem;
+		color: black;
+	}
 }
+
+
+// 動画------------------------------------------------
+
 .video{
 	width: 100%;
 	position: fixed;
-	z-index: -1;
 	top: 0;
     left: 0;
+	z-index: -1;
 }
+
 .video-content{
 	height:100vh;
 	width:100%;
     object-fit: cover;
 }
-.title{
-	font-family: 'Italianno', cursive;
-	font-size: 75px;
-	color: black;
-}
-.list{
-	font-size: 20px;
-	color: black;
-}
 
 
+// 社訓的な------------------------------------------------
 
-
-.text{
+.motto{
 	color: white;
 	text-align: center;
-	height: 550px;
+	height: 60rem;
 	width: 100%;
-	margin-top: 900px;
+	margin-top: 100vh;
 	background-color: rgba(0,0,0,0.6);
+
+	.motto-title{
+		opacity: 0;
+		font-size: 3.5rem;
+	}
+	.motto-text{
+		opacity: 0;
+		font-size: 2rem;
+	}
+	.droneimg{
+		opacity: 0;
+		position: relative;
+		top :-10rem;
+		left: 15rem;
+	}
 }
-.text-title{
-	opacity: 0;
-	font-size: 30px;
-}
-.text-text{
-	opacity: 0;
-	font-size: 20px;
-}
+
 .fadeInDown {
  -webkit-animation-fill-mode:both;
  -ms-animation-fill-mode:both;
@@ -110,53 +131,206 @@ header{
 }
 
 
+// サービス------------------------------------------------
 
 .service{
-	text-align: center;
-	font-size: 60px;
-	line-height: 100vh;
-	height: 100vh;
-	background-color: white;
+
+	padding-top: 5rem;
+	padding-bottom: 10rem;
+	background-color: rgba(255,255,255,0.7);
+
+	.title{
+		margin-left: 5rem;
+		font-family:"Antro Vectra";
+		font-size: 6rem;
+	}
+
+	.list{
+		height: 40rem;
+		width:75vw;
+		z-index: 1;
+	}
+
+	.mask{
+		height: 40rem;
+		width: 75vw;
+		z-index: 2;
+		background-color: rgba(0,0,0,0.3);
+		position: relative;
+	}
+
+	.text{
+		background-color: rgba(255,255,255,0.7);
+		height: 33rem;
+		width: 40%;
+		position: absolute;
+		left: 25vw;
+		top: 4rem;
+		padding: 3rem;
+		z-index: 3;
+
+		hr{
+			color: black;
+		}
+
+		.head{
+			font-weight: bold;
+			font-size: 3rem;
+		}
+
+		.explain{
+			font-family :"游ゴシック体", YuGothic;
+			font-size: 1.5rem;
+		}
+	}
+
+	.drone{
+		opacity: 0;
+		background-image: url("drone.jpg");
+		background-size: cover;
+		}
+
+	.it{
+		opacity: 0;
+		background-image: url("it.jpg");
+		background-size: cover;
+		margin-left: 25vw;
+	}
+
+	.resort{
+		opacity: 0;
+		background-image: url("resort.jpg");
+		background-size: cover;
+	}
+}
+
+.SlideRight {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:2s;
+ -ms-animation-duration:2s;
+ animation-duration:2s;
+ -webkit-animation-name: SlideRight;
+ animation-name: SlideRight;
+ visibility: visible !important;
+}
+@-webkit-keyframes SlideRight {
+ 0% { opacity: 0.2; -webkit-transform: translateX(-75vw); }
+ 100% { opacity: 1; -webkit-transform: translateX(0); }
+}
+@keyframes SlideRight {
+ 0% { opacity: 0.2; -webkit-transform: translateX(-75vw); -ms-transform: translateX(-75vw); transform: translateX(-75vw); }
+ 100% { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateY(0); transform: translateX(0); }
+}
+
+.SlideLeft {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:2s;
+ -ms-animation-duration:2s;
+ animation-duration:2s;
+ -webkit-animation-name: SlideLeft;
+ animation-name: SlideLeft;
+ visibility: visible !important;
+}
+@-webkit-keyframes SlideLeft {
+ 0% { opacity: 0.2; -webkit-transform: translateX(75vw); }
+ 100% { opacity: 1; -webkit-transform: translateX(0); }
+}
+@keyframes SlideLeft {
+ 0% { opacity: 0.2; -webkit-transform: translateX(75vw); -ms-transform: translateX(75vw); transform: translateX(75vw); }
+ 100% { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateY(0); transform: translateX(0); }
 }
 
 
+// 会社概要------------------------------------------------
 
+.company{
+
+	background-color: rgba(0,0,0,0.8);
+	padding-bottom: 10rem;
+	color: white;
+
+	.title{
+		font-family:"Antro Vectra";
+		font-size: 6rem;
+		text-align: center;
+		padding: 10rem 4rem 4rem 0;
+		margin-bottom: 3rem;
+	}
+
+	table{
+		font-size: 1.7rem;
+	}
+
+}
+
+
+// 問い合わせ------------------------------------------------
 
 .contact{
-	height: 100vh;
-	background-color: rgba(0,0,0,0.6);
-}
-.contact-head{
-	height: 15vh;
-	color: white;
-}
-.contact-title{
-	font-family: 'Courgette', cursive;
-	font-family: 'Italianno', cursive;
-	font-size: 130px;
-	line-height: 18vh;
-	text-align: center;
-}
-.contact-form{
-	color: white;
-}
-.contact-text{
-	font-size: 18px;
+
+	background-color: rgba(255,255,255,0.9);
+	padding-bottom: 10rem;
+
+	.title{
+		font-family:"Antro Vectra";
+		font-size: 6rem;
+		text-align: center;
+		padding: 10rem 4rem 4rem 0;
+	}
+
+	.text{
+		font-size: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.form-control{
+		border-radius: 0;
+		resize: none;
+	}
 }
 
+
+.btn, .btn:hover, .btn:active, .btn:link, .btn:visited,{
+	width: 12rem;
+	padding: 0.8rem 0.6rem;
+	color: white;
+	border: solid 1px black;
+	background-color: black;
+	display: inline-block;
+	text-decoration: none;
+
+}
+
+
+
+
+// フッター------------------------------------------------
 
 footer{
 	color: white;
-	background-color: black;
+	background-color: rgba(0,0,0,0.9);
 	height: 25vh;
+
+	.title{
+		padding-top: 2rem;
+		font-family:"Antro Vectra";
+		font-size: 5rem;
+		color:white;
+	}
+
+	.list{
+		font-size: 2rem;
+		color: white;
+	}
 }
-.title2{
-	font-family: 'Italianno', cursive;
-	font-size: 70px;
-	color:white;
-}
-.list2{
-	font-size: 20px;
-	color: white;
-}
+
+
+
+
+
+
 
