@@ -1,0 +1,35 @@
+<header>
+
+    <div class="col-sm-6">
+      <%= link_to root_path do %>
+      <p class="title">Luxe Resorts</p>
+      <% end %>
+    </div>
+
+
+    <div class="col-sm-2">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-building"></i> SERVICE <i class="fas fa-bars"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="/areacontents">1.</i> エリアコンテンツ分析</a></li>
+          <li><a href="/meo">2.</i> MEO</a></li>
+          <li><a href="/site">3.</i> 自社予約サイト制作</a></li>
+          <li><a href="/sns">4.</i> SNS企画・運用</a></li>
+          <li><a href="/listing">5.</i> リスティング広告運用</a></li>
+        </ul>
+      </li>
+    </div>
+
+    <div class="col-sm-2">
+      <%= link_to '#Company' do %>
+        <p class="list"><i class="far fa-building"></i> COMPANY</p>
+      <% end %>
+    </div>
+
+    <div class="col-sm-2">
+      <%= link_to '#Contact' do %>
+        <p class="list"><i class="far fa-envelope"></i> CONTACT</p>
+      <% end %>
+    </div>
+
+</header>

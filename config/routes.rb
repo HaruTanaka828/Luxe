@@ -1,9 +1,22 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+devise_for :admins
 
 root 'homes#top'
 
 post '/' => 'homes#create'
+
+resources :newss
+
+get '/areacontents' => 'homes#area'
+
+get '/meo' => 'homes#meo'
+
+get '/site' => 'homes#site'
+
+get '/sns' => 'homes#sns'
+
+get '/listing' => 'homes#listing'
 
 end
 

@@ -79,6 +79,10 @@ gem 'pry-rails'
 
 gem 'dotenv-rails'
 
+gem 'rinku'
+
+gem 'seed_dump'
+
 group :production do
   gem 'mysql2'
 end

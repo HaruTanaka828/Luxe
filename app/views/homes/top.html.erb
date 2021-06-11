@@ -1,32 +1,61 @@
 
 <!-- ヘッダー　----------------------------------------------------------->
 
-<header>
-  <div class="center">
+<%= render 'template/top_header' %>
 
-    <div class="col-sm-4">
-      <%= link_to '#Service', class: "Editlink" do %>
-        <br><br><p class="list"><i class="fas fa-users"></i> SERVICE</p>
-      <% end %>
+<!-- 問い合わせありがとうメッセージ　----------------------------------------------------------->
+
+<% if flash[:success] %>
+  <div class="thanks">
+    <div class="alert alert-success">
+      <%= flash[:success] %>
     </div>
-
-    <div class="col-sm-4">
-      <p class="title">Luxe Resorts</p>
-    </div>
-
-    <div class="col-sm-4">
-      <%= link_to '#Contact',class: "Editlink" do %>
-        <br><br><p class="list"><i class="far fa-envelope"></i> CONTACT</p>
-      <% end %>
-    </div>
-
   </div>
-</header>
+<% end %>
 
 <!-- 動画　----------------------------------------------------------->
 
 <div class="video">
   <%= video_tag("/Luxe.mp4", autoplay: :true, muted: :true, loop: :true, class: 'video-content') %>
+</div>
+
+<div class="concept">
+  <p class="title">「見方が変われば世界は変わる」</p>
+  <p class="mission">Our Mission</p>
+  <p class="text">日本国内のあらゆる宿泊施設のバリューを最大化すると共に、<br>宿泊されるユーザー様に安心・安全で楽しんで頂ける施設創りを我々は追求いたします。</p>
+</div>
+
+
+<!-- ニュース　----------------------------------------------------------->
+
+<div class="news"><br><br>
+  <p class="title">News</p><br><br>
+
+  <div class="container">
+
+    <% @newss.each do |news| %>
+
+    <div class="col-sm-4">
+      <div class="content">
+        <div class="day">
+          <%= news.created_at.strftime('%Y/%m/%d')%>
+        </div><hr>
+        <div>
+          <%= simple_format(news.body) %>
+        </div>
+        <div class="rinku">
+        <%= raw Rinku.auto_link(simple_format(news.url))%>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+
+  <div class="center"><br><br>
+    <%= paginate @newss %>
+  </div>
+
 </div>
 
 
@@ -39,14 +68,14 @@
     </div>
   </div>
   <div class="col-sm-6">
-    <p class="motto-title">希望を配る人を輩出する。</p><br><br>
+    <p class="motto-title">Vision</p><br><br>
     <div class="motto-text">
-      <p>リーダーとは“希望を配る人”。<br><br>
-        それは素晴らしい熱量を共有する。謙虚だが自信に溢れ、妥協がない。<br><br>
-        常に最善をつくす、そして結果をだす。<br><br>
-        何事にも感謝をする、苦難に負けず乗り越えていける。<br><br>
-        人情に熱く思いやりがある。<br><br>
-        様々な“希望を配る人”を輩出し、世の中に貢献できる人、会社でありたい。<br><br>
+      <p>
+        2020年時点に日本全国の宿泊施設数は5.2万施設あり、<br><br>
+        部屋数にすると162.5万室と言われています。<br><br>
+        近年はコロナ禍において運営難の宿泊施設が数多く存在します。<br><br>
+        この中でも特にインバウンド需要に頼り切った施設づくりを<br><br>
+        行っている事で、
       </p></div>
   </div>
 </div>
@@ -57,10 +86,11 @@
 <div class="service", id="Service">
   <p class="title">Service</p>
 
-  <div class="list drone">
+  <div class="list area">
     <div class="mask">
+      <%= link_to areacontents_path do %>
       <div class="text">
-        <div class="head">最高の品質を最安で</div><hr>
+        <div class="head">エリアコンテンツKW分析</div><hr>
         <div class="explain">
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
@@ -72,13 +102,15 @@
           テキストテキストテキストテキストテキスト<br>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
 
-  <div class="list it">
+  <div class="list meo">
     <div class="mask">
+      <%= link_to meo_path do %>
       <div class="text">
-        <div class="head">最先端のテクノロジーを</div><hr>
+        <div class="head">MEO<span style="font-size:2rem;">(Map Engine Optimization)</span></div><hr>
         <div class="explain">
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
@@ -90,13 +122,15 @@
           テキストテキストテキストテキストテキスト<br>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
 
-  <div class="list resort">
+  <div class="list site">
     <div class="mask">
+      <%= link_to site_path do %>
       <div class="text">
-        <div class="head">OTAを戦力化</div><hr>
+        <div class="head">自社予約サイト制作</div><hr>
         <div class="explain">
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
@@ -108,6 +142,47 @@
           テキストテキストテキストテキストテキスト<br>
         </div>
       </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="list sns">
+    <div class="mask">
+      <%= link_to sns_path do %>
+      <div class="text">
+        <div class="head">SNS企画・運用</div><hr>
+        <div class="explain">
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="list listing">
+    <div class="mask">
+      <%= link_to listing_path do %>
+      <div class="text">
+        <div class="head">リスティング広告運用</div><hr>
+        <div class="explain">
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキスト<br>
+        </div>
+      </div>
+      <% end %>
     </div>
   </div>
 
@@ -116,7 +191,8 @@
 
 <!-- 会社概要　----------------------------------------------------------->
 
-<div class="company center">
+
+<div class="company center", id="Company">
   <div class="title">Company</div>
 
   <div class="container">
@@ -144,19 +220,19 @@
       <table class="table">
         <tr>
           <th class="col-xs-3"><p></p>設立</th>
-          <td class="col-xs-9"><p></p>2017年9月14日<p></p></td>
+          <td class="col-xs-9"><p></p>0000年0月0日<p></p></td>
         </tr>
         <tr>
           <th><p></p>資本金</th>
-          <td><p></p>500,000円<p></p></td>
+          <td><p></p>000,000円<p></p></td>
         </tr>
         <tr>
           <th><p></p>従業員数</th>
-          <td><p></p>25名<p></p></td>
+          <td><p></p>00名<p></p></td>
         </tr>
         <tr>
           <th><p></p>事業内容</th>
-          <td><p></p>イベントプロモーション・移動体通信販売営業<br>ドローン空撮・YouTubeチャンネル運営</td>
+          <td><p></p>テキストテキストテキストテキスト</td>
         </tr>
       </table>
     </div>
@@ -168,16 +244,6 @@
 <!-- 問い合わせ　----------------------------------------------------------->
 
 <div class="contact center", id="Contact">
-
-  <div class="contact-success">
-      <% if flash[:success] %>
-        <div class="thanks">
-          <div class="alert alert-success">
-            <%= flash[:success] %>
-          </div>
-        </div>
-      <% end %>
-  </div>
 
   <div class="title">Contact</div>
 
@@ -199,10 +265,10 @@
     <%= form_with model:@contact, url: root_path do |f| %>
 
       <div>
-  	    <%= f.text_field :name, placeholder: "お名前", class:'form-control' %>
+  	    <%= f.text_field :name, placeholder: "ご担当者様", class:'form-control' %>
       </div><br><br><br>
       <div>
-  	    <%= f.text_field :address, placeholder: "メールアドレス", class:'form-control' %>
+  	    <%= f.text_field :address, placeholder: "連絡先メールアドレス、または電話番号", class:'form-control' %>
       </div><br><br><br><br>
       <div>
   	    <%= f.text_area :body, placeholder: "お問い合わせ内容", class:'form-control', rows: 7%>
@@ -221,37 +287,6 @@
 
 </div>
 
-
 <!-- フッター　----------------------------------------------------------->
 
-<footer>
-  <div class="center">
-  	<div class="row">
-
-      <div class="col-sm-4">
-      	<%= link_to '#Service', class: "Editlink" do %>
-          <br><br><p class="list"><i class="fas fa-users"></i> SERVICE</p>
-        <% end %>
-      </div>
-
-      <div class="col-sm-4">
-      	<span id="back">
-      	  <a href="#">
-      	    <%= link_to root_path,class: "Editlink" do %>
-              <p class="title">Luxe Resorts</p>
-            <% end %>
-          </a>
-        </span>
-      </div>
-
-      <div class="col-sm-4">
-        <%= link_to '#Contact',class: "Editlink" do %>
-          <br><br><p class="list"><i class="far fa-envelope"></i> CONTACT</p>
-        <% end %>
-      </div>
-
-    </div>
-      <p class="address">大阪府大阪市北区天満2-8-17<br>天満橋パークビル4階</p>
-
-  </div>
-</footer>
+<%= render 'template/top_footer' %>

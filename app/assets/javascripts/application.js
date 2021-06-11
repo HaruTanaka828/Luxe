@@ -17,6 +17,9 @@
 //= require jquery
 //= require bootstrap
 
+
+//トップfooterロゴ クリックでスクロール
+
 $(document).on('turbolinks:load', function() {
   $('#back a').on('click',function(event){
     $('body, html').animate({
@@ -27,8 +30,9 @@ $(document).on('turbolinks:load', function() {
 });
 
 
+document.addEventListener("turbolinks:load", function() {
 
-//リンクにスクロール
+//リンク先にスクロール
 
 $(function () {
     $('a[href^="#"]').click(function () {
@@ -60,8 +64,12 @@ jQuery(function($){
   });
 });
 
-
 //社訓のフェードイン
+
+$(function() {
+    // class'show'をdiv要素に追加
+    $('div').addClass('show');
+});
 
 $('.droneimg').css('visibility','hidden');
 $(window).scroll(function(){
@@ -102,11 +110,11 @@ $(window).scroll(function(){
 
 //サービスのスライドイン
 
-$('.drone').css('visibility','hidden');
+$('.area').css('visibility','hidden');
 $(window).scroll(function(){
  var windowHeight = $(window).height(),
      topWindow = $(window).scrollTop();
- $('.drone').each(function(){
+ $('.area').each(function(){
   var targetPosition = $(this).offset().top;
   if(topWindow > targetPosition - windowHeight + 100){
    $(this).addClass("SlideRight");
@@ -114,26 +122,55 @@ $(window).scroll(function(){
  });
 });
 
-$('.resort').css('visibility','hidden');
+$('.meo').css('visibility','hidden');
 $(window).scroll(function(){
  var windowHeight = $(window).height(),
      topWindow = $(window).scrollTop();
- $('.resort').each(function(){
-  var targetPosition = $(this).offset().top;
-  if(topWindow > targetPosition - windowHeight + 100){
-   $(this).addClass("SlideRight");
-  }
- });
-});
-
-$('.it').css('visibility','hidden');
-$(window).scroll(function(){
- var windowHeight = $(window).height(),
-     topWindow = $(window).scrollTop();
- $('.it').each(function(){
+ $('.meo').each(function(){
   var targetPosition = $(this).offset().top;
   if(topWindow > targetPosition - windowHeight + 100){
    $(this).addClass("SlideLeft");
   }
  });
 });
+
+$('.site').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.site').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("SlideRight");
+  }
+ });
+});
+
+$('.sns').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.sns').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("SlideLeft");
+  }
+ });
+});
+
+$('.listing').css('visibility','hidden');
+$(window).scroll(function(){
+ var windowHeight = $(window).height(),
+     topWindow = $(window).scrollTop();
+ $('.listing').each(function(){
+  var targetPosition = $(this).offset().top;
+  if(topWindow > targetPosition - windowHeight + 100){
+   $(this).addClass("SlideRight");
+  }
+ });
+});
+
+
+
+})
+
