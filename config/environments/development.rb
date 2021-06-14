@@ -63,7 +63,7 @@ Rails.application.configure do
   #メイラーの設定
 
   #deviseが認証用のURLなどを生成するのに必要になる（らしい）
-  config.action_mailer.default_url_options = {  :host => '35.74.73.158' }
+  config.action_mailer.default_url_options = {  :host => 'http://luxe-resorts.com' }
 
   #送信方法を指定（この他に:sendmail/:file/:testなどがあります)
   config.action_mailer.delivery_method = :smtp
