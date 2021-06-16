@@ -84,5 +84,5 @@ gem 'rinku'
 gem 'seed_dump'
 
 group :production do
-  gem 'mysql2', '~> 0.2.0'
+  gem 'mysql2'
 end
