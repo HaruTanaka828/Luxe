@@ -42,7 +42,6 @@ a, a:link, a:visited, a:active, a:hover{
 }
 
 .rinku{
-
 	a, a:link, a:active, a:hover{
 	text-decoration: normal;
 	color: #0000FF;
@@ -61,11 +60,17 @@ li, ul{
 body{
 	width: 100vw;
 	font-family:YuMincho, serif;
+	padding: 0;
+	margin: 0;
 }
 
 .bodys{
 	min-height: 75vh;
 	padding-top: 10rem;
+
+	.sp{
+		display: none;
+	}
 }
 
 // ヘッダー・問い合わせメッセージ------------------------------------------------
@@ -96,6 +101,10 @@ header{
 		margin-right: 3rem;
 		line-height: 10rem;
 	}
+
+	.dropdown-menu{
+		font-size: 2.5rem;
+	}
 }
 
 .thanks{
@@ -105,23 +114,6 @@ header{
 	width: 100vw;
 }
 
-.dropdown{
-	line-height: 10rem;
-	font-size: 2rem;
-	color: black;
-}
-
-.dropdown-menu{
-	font-size: 2rem;
-	padding-right: 3rem;
-}
-
-.adminheader{
-	font-family: 'Antro', sans-serif;
-	position: absolute;
-	top:3rem; left:3rem;
-	font-size: 5rem;
-}
 
 // 動画------------------------------------------------
 
@@ -472,3 +464,332 @@ footer{
 	}
 }
 
+
+// PCのみ---------------------------------------------------------------------------------------------------------------
+
+@media screen and (min-width: 500px) {
+
+.sp{
+	display: none !important;
+}
+
+}
+
+// SPのみ---------------------------------------------------------------------------------------------------------------
+
+@media screen and (max-width: 500px) {
+
+.pc{
+	display: none !important;
+}
+
+html {
+    font-size: 30%;
+    width: 100vw;
+}
+
+// ヘッダー・問い合わせメッセージ------------------------------------------------
+
+.sp-header{
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: rgba(255,255,255,0.5);
+  width: 100vw;
+  height:15rem;
+  font-size: 5rem;
+  font-family: YuMincho, serif;
+}
+
+.logo {
+  font-size: 8rem;
+  font-family: "Antro";
+  line-height: 18rem;
+}
+
+.drawer-hidden {
+  display: none;
+}
+
+.drawer-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  margin-top: 8rem;
+}
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+.drawer-open span:after {
+  top: 8px;
+}
+
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.drawer-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 99;
+  background: rgba(255,255,255,0.8);
+  transition: .5s;
+}
+
+#drawer-check:checked ~ .drawer-content {
+  left: 0;
+}
+
+.border{
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0,0,0,1);
+  border: 0;
+}
+
+
+// スライドショー------------------------------------------------
+
+.box{
+	z-index: 1;
+	height: 100vh;
+}
+.image1 {
+	background-image: image-url("img1.jpg");
+}
+.image2 {
+	background-image: image-url("img2.jpg");
+}
+.image3 {
+	background-image: image-url("img3.jpg");
+}
+
+.sp-top{
+	text-align: center;
+	z-index: 3;
+	color: white;
+	font-size: 1rem;
+	position: absolute;
+	top :40rem; left:0;
+	width: 100vw;
+
+	.title{
+		font-size: 4.5rem;
+		font-weight: bold;
+	}
+
+	.mission{
+		font-size: 3rem;
+		font-family: "Antro";
+	}
+
+	.text{
+		font-size: 2.5rem;
+	}
+
+}
+
+
+// ニュース------------------------------------------------
+
+.news{
+	text-align: center;
+	padding-left: 0rem;
+	margin-top: 0;
+}
+
+
+// 社訓的な------------------------------------------------
+
+.motto{
+	height: 80vh;
+	background-image: image-url("building.jpg");
+	background-size: cover;
+
+	.droneimg{
+		position: relative;
+		top :5rem;
+		left:-20rem;
+	}
+}
+
+
+// サービス------------------------------------------------
+
+.service{
+
+	padding-bottom: 0;
+
+	.title{
+	}
+
+	.list{
+		width:100vw;
+	}
+
+	.mask{
+		height: 40rem;
+		width: 100vw;
+	}
+
+	.text{
+		width: 50vw;
+		position: absolute;
+		left: 25vw;
+		top: 4rem;
+
+		hr{
+		}
+
+		.head{
+		}
+
+		.explain{
+		}
+	}
+
+	.area{
+		width: 100vw;
+	}
+
+	.meo{
+		width: 100vw;
+		margin-left: 0;
+	}
+
+	.site{
+		width: 100vw;
+	}
+
+	.sns{
+		width: 100vw;
+		margin-left: 0;
+	}
+
+	.listing{
+		width: 100vw;
+	}
+}
+
+@-webkit-keyframes SlideRight {
+ 0% { opacity: 0.2; -webkit-transform: translateX(-100vw); }
+ 100% { opacity: 1; -webkit-transform: translateX(0); }
+}
+@keyframes SlideRight {
+ 0% { opacity: 0.2; -webkit-transform: translateX(-100vw); -ms-transform: translateX(-75vw); transform: translateX(-100vw); }
+ 100% { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateY(0); transform: translateX(0); }
+}
+
+@-webkit-keyframes SlideLeft {
+ 0% { opacity: 0.2; -webkit-transform: translateX(100vw); }
+ 100% { opacity: 1; -webkit-transform: translateX(0); }
+}
+@keyframes SlideLeft {
+ 0% { opacity: 0.2; -webkit-transform: translateX(100vw); -ms-transform: translateX(75vw); transform: translateX(100vw); }
+ 100% { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateY(0); transform: translateX(0); }
+}
+
+
+// 会社概要------------------------------------------------
+
+.company{
+
+	background-color: rgba(0,0,0,0.03);
+	color: black;
+
+	.title{
+	}
+
+	table{
+	}
+
+}
+
+
+// 問い合わせ------------------------------------------------
+
+.contact{
+
+	.title{
+	}
+
+	.text{
+	}
+
+	.form-control{
+	}
+
+	.btn, .btn:hover, .btn:active, .btn:link, .btn:visited,{
+	}
+}
+
+
+
+
+// フッター------------------------------------------------
+
+footer{
+	color: white;
+	background-color: rgba(0,0,0,1);
+	height: 25vh;
+	width: 100vw;
+
+	.title{
+		padding-top: 3rem;
+		padding-right: 5rem;
+		font-family: 'Antro', sans-serif;
+		font-size: 4rem;
+		color:white;
+		text-align: right;
+	}
+
+	.list{
+		margin-left: 3rem;
+		font-size: 2rem;
+		color: white;
+	}
+
+	.address{
+		text-align: right;
+		padding-right: 5rem;
+	}
+}
+
+
+
+
+}

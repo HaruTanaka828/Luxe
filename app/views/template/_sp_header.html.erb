@@ -1,0 +1,54 @@
+<div class="sp-header container">
+<div class="row">
+
+
+<div class="col-xs-9">
+
+  <%= link_to root_path do %>
+  <div class="logo">Luxe Resorts</div><!-- /.logo -->
+  <% end %>
+
+</div>
+
+<div class="col-xs-3">
+
+  <!-- ハンバーガーメニュー部分 -->
+  <div class="drawer">
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer-check" class="drawer-open"><span></span></label>
+
+    <!-- 追加：メニューを閉じるための要素 -->
+    <label for="drawer-check" class="drawer-close"></label>
+
+    <!-- メニュー -->
+    <nav class="drawer-content">
+      <ul class="drawer-list">
+        <li class="drawer-item">
+          <br><p class="menu"> Service</p><br>
+        <i class="far fa-chart-bar"></i><%= link_to " エリアコンテンツ分析", areacontents_path %>
+        </li><hr class="border"><!-- /.drawer-item -->
+        <li class="drawer-item">
+          <i class="fas fa-map-marker-alt"></i><%= link_to " MEO", meo_path %>
+        </li><hr class="border"><!-- /.drawer-item -->
+        <li class="drawer-item">
+          <i class="fas fa-desktop"></i><%= link_to " 自社予約サイト制作", site_path %>
+        </li><hr class="border"><!-- /.drawer-item -->
+        <li class="drawer-item">
+          <i class="fab fa-twitter"></i><%= link_to " SNS企画・運用", sns_path %>
+        </li><hr class="border">
+        <li class="drawer-item">
+          <i class="far fa-address-card"></i><%= link_to " リスティング広告運用", listing_path %>
+        </li><hr class="border">
+      </ul><!-- /.drawer-list -->
+    </nav>
+
+  </div>
+
+</div>
+
+</div>
+</div>
+

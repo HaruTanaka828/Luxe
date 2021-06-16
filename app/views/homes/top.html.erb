@@ -1,7 +1,13 @@
 
 <!-- ヘッダー　----------------------------------------------------------->
 
-<%= render 'template/top_header' %>
+<div class="pc">
+  <%= render 'template/top_header' %>
+</div>
+
+<div class="sp">
+  <%= render 'template/sp_header' %>
+</div>
 
 <!-- 問い合わせありがとうメッセージ　----------------------------------------------------------->
 
@@ -13,7 +19,9 @@
   </div>
 <% end %>
 
-<!-- 動画　----------------------------------------------------------->
+<!-- pc用トップ　----------------------------------------------------------->
+
+<div class="pc">
 
 <div class="video">
   <%= video_tag("Luxe.mp4", autoplay: :true, muted: :true, loop: :true, class: 'video-content') %>
@@ -23,6 +31,29 @@
   <p class="title">「見方が変われば世界は変わる」</p>
   <p class="mission">Our Mission</p>
   <p class="text">日本国内のあらゆる宿泊施設のバリューを最大化すると共に、<br>宿泊されるユーザー様に安心・安全で楽しんで頂ける施設創りを我々は追求いたします。</p>
+</div>
+
+</div>
+
+
+<!-- sp用トップ　----------------------------------------------------------->
+
+<div class="sp">
+
+<div class="box">
+  <div class="images">
+    <div class="image1"></div>
+    <div class="image2"></div>
+    <div class="image3"></div>
+  </div>
+</div>
+
+<div class="sp-top">
+  <p class="title">「見方が変われば世界は変わる」</p><br>
+  <p class="mission">Our Mission</p>
+  <p class="text">日本国内のあらゆる宿泊施設のバリューを最大化すると共に、<br>宿泊されるユーザー様に安心・安全で<br>楽しんで頂ける施設創りを我々は追求いたします。</p>
+</div>
+
 </div>
 
 
@@ -37,9 +68,9 @@
 
     <div class="col-sm-4">
       <div class="content">
-        <div class="day">
-          <%= news.created_at.strftime('%Y/%m/%d')%>
-        </div><hr>
+        <div class="day"><hr class="sp">
+          <%= news.created_at.strftime('%Y/%m/%d')%><div class="sp"><br></div>
+        </div><hr class="pc">
         <div>
           <%= simple_format(news.body) %>
         </div>
@@ -61,7 +92,7 @@
 
 <!-- 社訓　----------------------------------------------------------->
 
-<div class="motto"><br><br><br>
+<div class="motto"><div class="pc"><br><br><br></div>
   <div class="col-sm-3">
     <div class="droneimg">
       <img alt="Drone" src="<%= asset_path "drone2.png" %>" style="height: 12rem;">
@@ -95,11 +126,6 @@
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
         </div>
       </div>
       <% end %>
@@ -112,11 +138,6 @@
       <div class="text">
         <div class="head">MEO<span style="font-size:2rem;">(Map Engine Optimization)</span></div><hr>
         <div class="explain">
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
@@ -135,11 +156,6 @@
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
         </div>
       </div>
       <% end %>
@@ -155,11 +171,6 @@
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
         </div>
       </div>
       <% end %>
@@ -172,11 +183,6 @@
       <div class="text">
         <div class="head">リスティング広告運用</div><hr>
         <div class="explain">
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
-          テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキスト<br>
@@ -287,6 +293,9 @@
 
 </div>
 
+
 <!-- フッター　----------------------------------------------------------->
 
-<%= render 'template/top_footer' %>
+<div class="pc">
+  <%= render 'template/top_footer' %>
+</div>
