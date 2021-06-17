@@ -277,7 +277,7 @@ header{
 	}
 
 	.text{
-		background-color: rgba(255,255,255,0.9);
+		background-color: rgba(255,255,255,0.7);
 		height: 33rem;
 		width: 40%;
 		position: absolute;
@@ -505,9 +505,10 @@ html {
 }
 
 .logo {
-  font-size: 8rem;
+  font-size: 7rem;
   font-family: "Antro";
   line-height: 18rem;
+  font-weight: bold;
 }
 
 .drawer-hidden {
@@ -608,17 +609,19 @@ html {
 	width: 100vw;
 
 	.title{
-		font-size: 4.5rem;
+		font-size: 5rem;
 		font-weight: bold;
 	}
 
 	.mission{
-		font-size: 3rem;
+		font-size: 6rem;
+		font-weight: bold;
 		font-family: "Antro";
 	}
 
 	.text{
 		font-size: 2.5rem;
+		line-height: 5rem;
 	}
 
 }
@@ -630,16 +633,43 @@ html {
 	text-align: center;
 	padding-left: 0rem;
 	margin-top: 0;
+
+	.title{
+		font-weight: bold;
+		font-size: 6rem;
+	}
+
+	.content{
+		font-size: 3.5rem;
+	}
+
+	.day{
+		font-size: 3rem;
+	}
+
+	.body{
+	}
+
+	hr{
+	}
 }
 
 
 // 社訓的な------------------------------------------------
 
 .motto{
-	height: 80vh;
+	height: 110rem;
 	background-image: image-url("building.jpg");
 	background-size: cover;
 
+	.motto-title{
+		font-size: 8rem;
+		font-weight: bold;
+	}
+	.motto-text{
+		font-size: 3.3rem;
+		line-height: 5.5rem;
+	}
 	.droneimg{
 		position: relative;
 		top :5rem;
@@ -655,30 +685,37 @@ html {
 	padding-bottom: 0;
 
 	.title{
+		font-weight: bold;
+		letter-spacing: 1.5rem;
+		font-size: 8rem;
 	}
 
 	.list{
+		height: 50vh;
 		width:100vw;
 	}
 
 	.mask{
-		height: 40rem;
+		height: 100%;
 		width: 100vw;
 	}
 
 	.text{
-		width: 50vw;
+		height: 40vh;
+		width: 80vw;
 		position: absolute;
-		left: 25vw;
-		top: 4rem;
+		left: 10vw;
+		top: 5vh;
 
 		hr{
 		}
 
 		.head{
+			font-size: 6rem;
 		}
 
 		.explain{
+			font-size: 3rem;
 		}
 	}
 
@@ -732,6 +769,8 @@ html {
 	color: black;
 
 	.title{
+		font-weight: bold;
+		font-size: 3rem;
 	}
 
 	table{
